@@ -1,12 +1,204 @@
-<html>
-  <head>
-    <title>Oreille d'Or - Tchat</title>
-  </head>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oreille d'Or - Tchat</title>
+  <style>
+    :root{
+      --bg:#ffeeea;
+      --card:#ffffff;
+      --muted:#a34c3b;
+      --accent:#ff8066;
+      --accent-dark:#ff5938;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      background:var(--bg);
+      margin:0;
+      padding:32px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      color:#0f172a
+    }
+    .container{
+      max-width:880px;
+      width:100%;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(15,23,42,0.06);
+      padding:28px
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:16px;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:20px
+    }
+    h1{
+      margin:0;
+      font-size:24px
+    }
+    p.lead{
+      color:var(--muted);
+      margin-top:6px;
+      font-size:16px;
+    }
+    .section{
+      margin-top:32px;
+      padding-top:16px;
+      border-top:1px solid #ffe6e1
+    }
+    h2{
+      margin:0 0 8px 0;
+      font-size:18px
+    }
+    ul{
+      margin:8px 0 0 20px;
+      color:var(--muted)
+    }
+    li{
+      margin-bottom:6px
+    }
+    .note{
+      background:#fff1f1;
+      border-left:4px solid var(--accent);
+      padding:10px;
+      border-radius:8px;
+      color:#ff502d;
+      margin-top:12px
+    }
+    footer{
+      margin-top:40px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center
+    }
+    .cta{
+      display:inline-block;
+      margin-top:16px;
+      padding:10px 18px;
+      border-radius:10px;
+      background:var(--accent);
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+    }
+    @media (max-width:640px){
+      body{padding:18px}
+      .container{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <!-- Header -->
+    <header>
+      <div class="logo">OO</div>
+      <div>
+        <h1>Oreille d'Or</h1>
+        <p class="lead">Un espace bienveillant et anonyme pour s'exprimer librement, par écrit.</p>
+      </div>
+    </header>
 
-  <body>
-    Bienvenue
+    <!-- Présentation -->
+    <section class="section" aria-labelledby="presentation">
+      <h2 id="presentation">💬 L'esprit du service</h2>
+      <ul>
+        <li>
+            Avoir sa place, <strong>parler sans jugement</strong>, vider son sac, être entendu·e.
+        </li>
+        <li>
+            Espace de parole <strong>libre et respectueux</strong>, non professionnel.
+        </li>
+        <li>
+            <strong>En aucun cas</strong> un service d'urgence.
+        </li>
+      </ul>
+    </section>
 
-  <!--Start of Tawk.to Script-->
+    <!-- Horaires -->
+    <section class="section" aria-labelledby="horaires">
+      <h2 id="horaires">🕒 Horaires</h2>
+      <ul>
+        <li><strong>Lundi</strong> – 21h15 à 22h30</li>
+        <li><strong>Mardi</strong> – 21h15 à 22h30</li>
+        <li><strong>Mercredi</strong> – 21h15 à 22h30</li>
+        <li>-----</li>
+        <li><strong>Vendredi</strong> – 21h15 à 22h30</li>
+        <li><strong>Samedi</strong> – 21h15 à 22h30</li>
+        <li>-----</li>
+      </ul>
+      <p class="note">
+        La disponibilité n'est pas garantie à chaque créneau.
+      </p>
+    </section>
+
+    <!-- Modalités -->
+    <section class="section" aria-labelledby="modalites">
+      <h2 id="modalites">📱 Modalités</h2>
+      <ul>
+        <li>Échanges uniquement <strong>par écrit</strong> (chat en direct).</li>
+        <li>Oreille d'Or n'émet <strong>ni jugement, ni conseil</strong>.</li>
+        <li>Il n'y a qu'<strong>un seul écoutant</strong>, toujours la même personne.</li>
+        <li>Des ressources <strong>peuvent être fournies</strong> par Oreille d'Or si l'explicite demande en est faite.</li>
+        <li>Le service est <strong>anonyme</strong>, mais des données techniques (ex. adresse IP) peuvent être enregistrées.</li>
+        <li><strong>Aucun lien</strong> n'est fait entre les conversations.</li>
+        <li>Puisqu'il s'agit d'un service d'écoute et non d'un service d'aide, toute situation pouvant être jugée de "grave" ou d'"urgente" <strong>est traitée comme n'importe quel autre sujet d'écoute</strong>. Si vous cherchez des solutions à un problème, urgent ou non, vous n'êtes pas au bon endroit.</li>
+      </ul>
+    </section>
+
+    <!-- Règles -->
+    <section class="section" aria-labelledby="regles">
+      <h2 id="regles">🛡️ Règles</h2>
+      <ul>
+        <li>Tous les sujets sont acceptés, <strong>sauf</strong> les confidences sur des <strong>crimes commis PAR l'appelant</strong>. <i>Vous pouvez parler d'un crime que vous avez subi, mais pas d'un que vous auriez commis</i>.</li>
+        <li><strong>Les tchats peuvent être interrompus</strong> en cas d'abus, provocation, malaise ou tout autre motif jugé comme une utilisation inappropriée du service. Oreille d'Or se réserve tous les droits de terminer des conversations et de bloquer les contrevenants.</li>
+        <li>Ce service est fourni "<strong>tel quel</strong>", sans garantie de disponibilité ou de continuité.</li>
+        <li>Les conversations sont <strong>archivées par défaut</strong>, l'appelant peut demander leur suppression.</li>
+        <li><strong>Orienté sur l'appelant</strong> : Aucune réponse ne sera accordée aux questions personnelles ou sur le service (hors informations ici-présentes).</li>
+      </ul>
+    </section>
+
+    <!-- En cas de d'urgence -->
+    <section class="section" aria-labelledby="urgence">
+      <h2 id="urgence">🚨 En cas d'urgence</h2>
+      <div class="note">
+        Ce service ne remplace pas un professionnel de santé. En cas de détresse grave ou urgente, veuillez contacter le <strong>15</strong> ou un centre d'aide approprié.
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" aria-labelledby="contact">
+      <h2 id="contact">📩 Contact pro</h2>
+      <p>
+        Pour poser une question, contacte-moi uniquement par email.
+      </p>
+      <a class="cta" href="mailto:oreille.d.or@outlook.com">Envoyer un mail</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      &copy; Oreille d'Or 2025 – Tous droits réservés – Ce service est proposé dans un esprit de respect et d'écoute.
+    </footer>
+  </div>
+
+<!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -18,12 +210,7 @@
     s0.parentNode.insertBefore(s1,s0);
     })();
     </script>
-  <!--End of Tawk.to Script-->
+<!--End of Tawk.to Script-->
 
-  </body>
-
-  
+</body>
 </html>
-
-
-
